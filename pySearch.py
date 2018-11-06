@@ -5,7 +5,7 @@ import argparse
 import webbrowser
 
 argparser = argparse.ArgumentParser()
-argparser.add_argument("-s", action="append", help="Takes a query to search for and searches it.", nargs="*")
+argparser.add_argument("-s", help="Takes a query to search for and searches it.", nargs="*")
 argparser.add_argument("-e", "--engine", help="Changes the name or alias of a search engine and sets it as the search engine for the session", nargs="+")
 argparser.add_argument("-d", "--domain", help="Changes the domain extention", nargs="+")
 
@@ -56,6 +56,7 @@ if args.domain is not None:
 #end of cmd args handling
 
 for search in args.s:
-    searchObj = Search(search)
+    search_ = search.split() #turns strings search back into a list
+    searchObj = Search(search_)
     searchObj.buildLink()
     searchObj.openBrowser()
