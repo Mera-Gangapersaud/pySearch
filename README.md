@@ -12,10 +12,14 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 1. Clone the repository
 1. Navigate inside the repository
-For Windows: Command Line Prompt 
-1. Run `pip install -e`
+For Windows: Use Command Line Prompt 
+For OSX: Use Terminal 
+1. Run `pip install -e .`
         OSX: Terminal 
-1. pySearch can be used by using `pySearch -s <search query>`
+1. pySearch can be used as follows:
+   
+ ```pySearch -s <search query> [-e <search engine>] [-d <domain>] [-h]```
+
 
 #### Command Line Arguments 
 - `-s`  takes query to search
@@ -30,7 +34,7 @@ Python 3
 
 ## Contributing
 ### Running the Tests
-pySearch tests use the [pytest](https://docs.pytest.org) library which is not part of the default Python library. If this is the first time pytest tests are being run on the machine use `pip install -r requirements.txt` to install pytest and it's dependencies (NOTE your `pip` alias may differ based on your installation). Afterwards pySearch tests can be run with the `pytest` command when inside the pySearch directory.
+pySearch tests use the [pytest](https://docs.pytest.org) library which is not part of the default Python library. If this is the first time pytest tests are being run on the machine navigate to the tests directiory and use `pip install -r requirements.txt` to install pytest and it's dependencies (NOTE your `pip` alias may differ based on your installation). Afterwards pySearch tests can be run with the `pytest` command when inside the pySearch directory.
 
 ### Style Enforcement with Flake8
 We are using Flake8 for style guide enforcement in pySearch.

@@ -31,7 +31,8 @@ class Search:
             self.searchString = "/s/keywords="
             self.searchQuery = "%20".join(self.searchRaw)
         elif self.engine == "twitter":
-            self.searchQuery = " ".join(self.searchRaw)
+            self.setDomain("com")
+            self.searchQuery = "%20".join(self.searchRaw)
         else:
             self.searchQuery = "+".join(self.searchRaw)
         #end of search exceptions
